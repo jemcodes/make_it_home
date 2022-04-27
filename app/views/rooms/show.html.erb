@@ -1,3 +1,7 @@
 <h1><%= @room.title %></h1>
 
 <p><%= @room.room_image %><p>
+
+<ul>
+  <li><%= link_to "Edit", edit_room_path(@room) %></li>
+</ul>
