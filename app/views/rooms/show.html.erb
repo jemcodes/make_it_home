@@ -4,4 +4,8 @@
 
 <ul>
   <li><%= link_to "Edit", edit_room_path(@room) %></li>
+  <li><%= link_to "Destroy", room_path(@room), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
 </ul>
