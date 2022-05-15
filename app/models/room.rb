@@ -1,7 +1,7 @@
 class Room < ApplicationRecord
   include Visible
 
-  has_many :tasks
+  has_many :tasks, dependent: :destroy
   
   validates :title, presence: true
 end
