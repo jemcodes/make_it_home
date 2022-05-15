@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_27_230852) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_15_211240) do
   create_table "rooms", force: :cascade do |t|
     t.string "title"
     t.text "room_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -23,6 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_27_230852) do
     t.integer "room_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
     t.index ["room_id"], name: "index_tasks_on_room_id"
   end
 

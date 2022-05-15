@@ -11,19 +11,7 @@
 </ul>
 
 <h2>Tasks</h2>
-<% @room.tasks.each do |task| %>
- <ul>
-    <%= task.body %>
-  </ul>
-<% end %>
+<% render @room.tasks %>
 
 <h2>Add a task:</h2>
-<%= form_with model: [ @room, @room.tasks.build ] do |form| %>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<%= render 'tasks/form' %>
